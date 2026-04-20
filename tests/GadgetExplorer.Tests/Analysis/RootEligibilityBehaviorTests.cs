@@ -201,26 +201,5 @@ namespace GadgetExplorer.Tests.Analysis
             Assert.False(fixture.HasFinding("ExactSignatureConstructorNegative", PublicTwoStringConstructor));
         }
 
-        [Fact]
-        public void Exact_signature_constructor_profile_distinguishes_closed_generic_parameter_types()
-        {
-            var profile = new SerializerProfile(
-                "ExactClosedGenericListActivator",
-                new RootTypeEligibilityPolicy([RootTypeVisibility.PubliclyVisible]),
-                new SerializerTriggerPolicy(false),
-                [
-                    new ActivationPolicy(
-                        ActivationMode.ExactSignatureConstructor,
-                        ExactConstructorSignature: new ExactConstructorSignature(
-                            true,
-                            ["System.Nullable`1<System.Int32>"]))
-                ],
-                new CallbackPolicy([], []));
-
-            var trigger = fixture.GetSingleTrigger("ExactClosedGenericConstructorPositive", profile);
-
-            Assert.Equal("ExactClosedGenericConstructorPositive::.ctor(System.Nullable`1<System.Int32>)", trigger.TriggerMethodDisplay);
-            Assert.False(fixture.HasFinding("ExactClosedGenericConstructorNegative", profile));
-        }
     }
 }

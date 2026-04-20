@@ -72,6 +72,10 @@ The main pipeline is:
 - Keep changes small and follow existing patterns/style.
 - Do not change major analysis behavior unless the task explicitly calls for it.
 - Prefer updating the narrowest layer that owns the behavior.
+- Start each separate piece of work from a clean branch based on `origin/main`.
+- Do not stack a new PR on top of a previous topic branch; fetch, switch, and branch again from the latest `origin/main`.
+- Keep work in the `GadgetExplorer` repo/worktree you intend to ship from, and verify `git rev-parse --show-toplevel` before editing when multiple local clones exist.
+- When a branch is meant for GitHub review, wait for its server-side checks to finish before starting the next PR branch if the outcome could affect the follow-up work.
 - If you change loading, indexing, dispatch, sink matching, profiles, or reporting, add or update tests near the
   affected area.
 - Validate with targeted tests first, then run the relevant broader test command before finishing.

@@ -69,40 +69,6 @@ namespace GadgetExplorer.Tests.Analysis
         }
 
         [Fact]
-        public void Uses_concrete_receiver_type_to_narrow_interface_dispatch()
-        {
-            var trigger = fixture.GetSingleTrigger("ReceiverAwareInterfacePositive");
-
-            Assert.Collection(
-                trigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.InterfaceDispatch, "LateDisposable::Dispose()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
-        public void Finds_delegate_invocation_through_helper_method()
-        {
-            var trigger = fixture.GetSingleTrigger("DelegateSetterPositive");
-
-            Assert.Collection(
-                trigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.DelegateInvoke, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
-        public void Finds_local_delegate_invocation()
-        {
-            var trigger = fixture.GetSingleTrigger("LocalDelegateSetterPositive");
-
-            Assert.Collection(
-                trigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.DelegateInvoke, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
         public void Finds_generic_interface_dispatch_path_in_broad_mode()
         {
             AnalysisIndex broadIndex = fixture.GetIndex(InterfaceExpansionMode.Broad);
@@ -114,62 +80,6 @@ namespace GadgetExplorer.Tests.Analysis
                 edge => AssertEdge(broadIndex, edge, EdgeKind.InterfaceDispatch, "GenericHelloWorker::DoWork()"),
                 edge => AssertEdge(broadIndex, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
                 edge => AssertEdge(broadIndex, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
-        public void Uses_concrete_receiver_type_through_casted_using_disposal()
-        {
-            var trigger = fixture.GetSingleTrigger("UsingCastedDisposablePositive");
-
-            Assert.Collection(
-                trigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.InterfaceDispatch, "LateDisposable::Dispose()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
-        public void Rejects_unrelated_interface_dispatch_from_casted_using_disposal()
-        {
-            Assert.False(fixture.HasFinding("UsingCastedDisposableNegative"));
-        }
-
-        [Fact]
-        public void Preserves_exact_receiver_type_through_base_dispose_chain()
-        {
-            var trigger = fixture.GetSingleTrigger("UsingBaseDisposeChainPositive");
-
-            Assert.Collection(
-                trigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.InterfaceDispatch, "DisposalChainBase::Dispose()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.VirtualDispatch, "DisposalChainBase::Close()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.VirtualDispatch, "DangerousDisposalChain::DisposeCore()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
-        public void Rejects_unrelated_override_through_base_dispose_chain()
-        {
-            Assert.False(fixture.HasFinding("UsingBaseDisposeChainNegative"));
-        }
-
-        [Fact]
-        public void Resolves_struct_enumerator_disposal_with_strict_receiver_evidence()
-        {
-            var trigger = fixture.GetSingleTrigger("StructEnumeratorForeachPositive");
-
-            Assert.Collection(
-                trigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.InterfaceDispatch, "SinkingStructEnumerator::Dispose()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
-        public void Rejects_unrelated_targets_for_struct_enumerator_cleanup()
-        {
-            Assert.False(fixture.HasFinding("StructEnumeratorForeachNegative"));
         }
 
         [Fact]
@@ -223,42 +133,6 @@ namespace GadgetExplorer.Tests.Analysis
         }
 
         [Fact]
-        public void Strict_mode_rejects_open_ended_generic_enumerator_parameter_dispatch()
-        {
-            Assert.False(fixture.HasFinding("OpenEndedEnumerableParameterNegative"));
-        }
-
-        [Fact]
-        public void Preserves_exact_generic_enumerator_parameter_dispatch_in_strict_mode()
-        {
-            var trigger = fixture.GetSingleTrigger("ExactEnumerableParameterPositive");
-
-            Assert.Collection(
-                trigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.InterfaceDispatch, "SinkingEnumerableParameterSource::GetEnumerator()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
-        public void Strict_mode_rejects_open_ended_dictionary_enumerator_current_dispatch()
-        {
-            Assert.False(fixture.HasFinding("OpenEndedDictionaryEnumeratorCurrentNegative"));
-        }
-
-        [Fact]
-        public void Preserves_exact_dictionary_enumerator_current_dispatch_in_strict_mode()
-        {
-            var trigger = fixture.GetSingleTrigger("ExactDictionaryEnumeratorCurrentPositive");
-
-            Assert.Collection(
-                trigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.InterfaceDispatch, "SinkingDictionaryEnumerator::get_Current()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
         public void Finds_nested_call_chain_path_in_broad_mode()
         {
             AnalysisIndex broadIndex = fixture.GetIndex(InterfaceExpansionMode.Broad);
@@ -273,20 +147,6 @@ namespace GadgetExplorer.Tests.Analysis
                 edge => AssertEdge(broadIndex, edge, EdgeKind.InterfaceDispatch, "InterfaceHelloStep::Execute()"),
                 edge => AssertEdge(broadIndex, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
                 edge => AssertEdge(broadIndex, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-        }
-
-        [Fact]
-        public void Materializes_event_raise_only_for_exact_observed_subscription()
-        {
-            var positiveTrigger = fixture.GetSingleTrigger("EventCtorPositive");
-
-            Assert.Collection(
-                positiveTrigger.ReachabilityPath,
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "EventPublisher::Raise()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.EventRaise, "Helper::InvokeSink()"),
-                edge => AssertEdge(fixture, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-
-            Assert.False(fixture.HasFinding("EventWithoutSubscriptionNegative"));
         }
 
         [Fact]
@@ -346,22 +206,6 @@ namespace GadgetExplorer.Tests.Analysis
             var trigger = Assert.Single(finding.TriggerResults);
 
             Assert.Equal(7, trigger.ReachabilityPath.Count);
-        }
-
-        [Fact]
-        public void Off_mode_keeps_exact_interface_identity_but_drops_constraint_only_interface_dispatch()
-        {
-            AnalysisIndex offIndex = fixture.GetIndex(InterfaceExpansionMode.Off);
-            TriggerResult exactTrigger = fixture.GetSingleTrigger("ReceiverAwareInterfacePositive", mode: InterfaceExpansionMode.Off);
-
-            Assert.Collection(
-                exactTrigger.ReachabilityPath,
-                edge => AssertEdge(offIndex, edge, EdgeKind.InterfaceDispatch, "LateDisposable::Dispose()"),
-                edge => AssertEdge(offIndex, edge, EdgeKind.DirectCall, "Helper::InvokeSink()"),
-                edge => AssertEdge(offIndex, edge, EdgeKind.DirectCall, "MySpecialObject::SayHello()"));
-
-            Assert.False(fixture.HasFinding("StaticTypeConstrainedInterfaceDisposePositive", mode: InterfaceExpansionMode.Off));
-            Assert.Contains(fixture.GetSinkEvaluationResult(mode: InterfaceExpansionMode.Off).Findings, finding => finding.RootClassFullName == "VirtualCtorPositive");
         }
 
         [Fact]

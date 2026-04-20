@@ -52,7 +52,7 @@ namespace GadgetExplorer.Tests.Fixtures
             var sampleAssemblyPath = Path.GetFullPath(typeof(MySpecialObject).Assembly.Location);
             var assemblies = AssemblyInputLoader.LoadModules(
                 [sampleAssemblyPath],
-                assemblyResolutionMode: AssemblyResolutionMode.InferenceWithFallback);
+                assemblyResolutionMode: AssemblyResolutionMode.Restricted);
             var index = AnalysisIndex.Build(assemblies, mode);
             return new SmokeSampleAnalysisFixtureData(index, [new SinkDefinition("MySpecialObject", "SayHello")]);
         }

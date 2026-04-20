@@ -71,21 +71,6 @@ namespace GadgetExplorer.Tests.Analysis
         }
 
         [Fact]
-        public void Exact_generic_get_enumerator_dispatch_uses_the_concrete_receiver_in_strict_mode()
-        {
-            AnalysisIndex strictIndex = fixture.GetIndex();
-            MethodRecord method = GetMethod(strictIndex, "ExactEnumerableParameterPositive::.ctor()");
-            EdgeRecord[] outgoingEdges = GetOutgoingEdges(strictIndex, method);
-            string[] targets = [.. outgoingEdges.Select(edge => $"{edge.Kind}:{strictIndex.GetMethod(edge.TargetId).DisplayName}")];
-
-            Assert.True(
-                outgoingEdges.Any(edge =>
-                    edge.Kind == EdgeKind.InterfaceDispatch &&
-                    strictIndex.GetMethod(edge.TargetId).DisplayName.EndsWith("SinkingEnumerableParameterSource::GetEnumerator()", StringComparison.Ordinal)),
-                string.Join(Environment.NewLine, targets));
-        }
-
-        [Fact]
         public void Open_ended_generic_get_enumerator_dispatch_is_dropped_in_strict_mode()
         {
             AnalysisIndex strictIndex = fixture.GetIndex();

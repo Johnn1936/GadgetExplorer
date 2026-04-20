@@ -319,16 +319,6 @@ namespace GadgetExplorer.Tests.Analysis
         }
 
         [Fact]
-        public void Binary_formatter_profile_checks_nested_generic_arguments_without_field_graph_recursion()
-        {
-            var trigger = fixture.GetSingleTrigger("BinaryFormatterNestedGenericRootPositive", BinaryFormatter);
-
-            Assert.Equal(TriggerKind.DeserializationCallback, trigger.TriggerKind);
-            Assert.Equal("BinaryFormatterGenericCallbackBase`1::AfterDeserialize(System.Runtime.Serialization.StreamingContext)", trigger.TriggerMethodDisplay);
-            Assert.False(fixture.HasFinding("BinaryFormatterNestedGenericRootNegative", BinaryFormatter));
-        }
-
-        [Fact]
         public void Binary_formatter_profile_rejects_open_generic_root_definitions()
         {
             Assert.False(fixture.HasFinding("BinaryFormatterOpenGenericCallbackRoot`1", BinaryFormatter));

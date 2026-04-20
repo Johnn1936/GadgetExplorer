@@ -37,7 +37,9 @@ namespace GadgetExplorer.Tests.Loading
               }
               """);
 
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([copiedAssemblyPath]);
+            var loadResult = AssemblyInputLoader.LoadAssemblySet(
+                [copiedAssemblyPath],
+                assemblyResolutionMode: AssemblyResolutionMode.Restricted);
 
             Assert.Contains(Path.GetFullPath(runtimeConfigPath), loadResult.LoadPlan.RuntimeConfigPaths, StringComparer.OrdinalIgnoreCase);
             Assert.Contains(Path.GetDirectoryName(copiedAssemblyPath)!, loadResult.LoadPlan.InputRoots, StringComparer.OrdinalIgnoreCase);
@@ -49,7 +51,9 @@ namespace GadgetExplorer.Tests.Loading
             var scanDirectory = CreateTempDirectory();
             File.WriteAllText(Path.Combine(scanDirectory, "readme.txt"), "nothing to see here");
 
-            var ex = Assert.Throws<InvalidOperationException>(() => AssemblyInputLoader.LoadAssemblySet([scanDirectory]));
+            var ex = Assert.Throws<InvalidOperationException>(() => AssemblyInputLoader.LoadAssemblySet(
+                [scanDirectory],
+                assemblyResolutionMode: AssemblyResolutionMode.Restricted));
 
             Assert.Equal("No candidate assembly files were found in the provided inputs.", ex.Message);
         }
@@ -112,7 +116,7 @@ namespace GadgetExplorer.Tests.Loading
             File.WriteAllText(runtimeConfigPath, "{ this is not valid json");
             var progressMessages = new List<string>();
 
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], progressMessages.Add, AssemblyResolutionMode.InferenceWithFallback);
+            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], progressMessages.Add, AssemblyResolutionMode.Restricted);
 
             RuntimeConfigDiagnostic diagnostic = Assert.Single(loadResult.Diagnostics.InvalidRuntimeConfigFiles);
             Assert.Equal(Path.GetFullPath(runtimeConfigPath), diagnostic.Path);
@@ -143,7 +147,7 @@ namespace GadgetExplorer.Tests.Loading
               """);
             var progressMessages = new List<string>();
 
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], progressMessages.Add, AssemblyResolutionMode.InferenceWithFallback);
+            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], progressMessages.Add, AssemblyResolutionMode.Restricted);
 
             RuntimeConfigDiagnostic diagnostic = Assert.Single(loadResult.Diagnostics.RuntimeConfigFilesWithoutUsableFrameworkRequests);
             Assert.Equal(Path.GetFullPath(runtimeConfigPath), diagnostic.Path);
@@ -178,7 +182,9 @@ namespace GadgetExplorer.Tests.Loading
               }
               """);
 
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory]);
+            var loadResult = AssemblyInputLoader.LoadAssemblySet(
+                [scanDirectory],
+                assemblyResolutionMode: AssemblyResolutionMode.Restricted);
 
             Assert.Contains(loadResult.LoadPlan.RequestedFrameworks, framework =>
                 framework.Name == TestFrameworkName &&
@@ -208,7 +214,9 @@ namespace GadgetExplorer.Tests.Loading
               }
               """);
 
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory]);
+            var loadResult = AssemblyInputLoader.LoadAssemblySet(
+                [scanDirectory],
+                assemblyResolutionMode: AssemblyResolutionMode.Restricted);
 
             Assert.Contains(loadResult.LoadPlan.RequestedFrameworks, framework =>
                 framework.Name == TestFrameworkName &&
