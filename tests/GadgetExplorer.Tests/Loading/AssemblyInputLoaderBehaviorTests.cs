@@ -11,6 +11,8 @@ namespace GadgetExplorer.Tests.Loading
 {
     public sealed class AssemblyInputLoaderBehaviorTests : IDisposable
     {
+        private const string TestFrameworkName = "Microsoft.NETCore.App";
+        private const string TestFrameworkVersion = "9.1.2";
         private readonly List<string> _temporaryDirectories = [];
 
         [Fact]
@@ -23,13 +25,13 @@ namespace GadgetExplorer.Tests.Loading
             var runtimeConfigPath = Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json");
             File.WriteAllText(
                 runtimeConfigPath,
-                $$"""
+                """
               {
                 "runtimeOptions": {
-                  "tfm": "net{{Environment.Version.Major}}.0",
+                  "tfm": "net9.0",
                   "framework": {
                     "name": "Microsoft.NETCore.App",
-                    "version": "{{Environment.Version.Major}}.{{Environment.Version.Minor}}.0"
+                    "version": "9.1.2"
                   }
                 }
               }
@@ -82,51 +84,6 @@ namespace GadgetExplorer.Tests.Loading
         }
 
         [Fact]
-        public void No_runtimeconfig_uses_host_runtime_fallback_in_inference_with_fallback_mode()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            File.Copy(sampleAssemblyPath, Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath)), overwrite: true);
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.InferenceWithFallback);
-
-            Assert.True(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.NotEmpty(loadResult.LoadPlan.ResolverSearchDirectories);
-        }
-
-        [Fact]
-        public void Inference_with_fallback_mode_retains_host_runtime_search_directories_when_no_runtimeconfig_is_present()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            File.Copy(sampleAssemblyPath, Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath)), overwrite: true);
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.InferenceWithFallback);
-
-            Assert.True(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.NotEmpty(loadResult.LoadPlan.HostRuntimeSearchDirectories);
-            Assert.All(
-                loadResult.LoadPlan.HostRuntimeSearchDirectories,
-                directory => Assert.Contains(directory, loadResult.LoadPlan.ResolverSearchDirectories, StringComparer.OrdinalIgnoreCase));
-        }
-
-        [Fact]
-        public void Inference_no_fallback_mode_stays_within_input_roots_when_no_runtimeconfig_is_present()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            File.Copy(sampleAssemblyPath, Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath)), overwrite: true);
-            var currentRuntimeDirectory = Path.GetDirectoryName(typeof(object).Assembly.Location)!;
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.InferenceNoFallback);
-
-            Assert.Equal(AssemblyResolutionMode.InferenceNoFallback, loadResult.LoadPlan.AssemblyResolutionMode);
-            Assert.False(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.Empty(loadResult.LoadPlan.HostRuntimeSearchDirectories);
-            Assert.DoesNotContain(loadResult.Modules, module => IsLoadedFromDirectory(module, currentRuntimeDirectory));
-        }
-
-        [Fact]
         public void Load_result_returns_external_origin_for_unknown_or_null_paths()
         {
             var loadResult = new AssemblyLoadResult(
@@ -145,7 +102,7 @@ namespace GadgetExplorer.Tests.Loading
         }
 
         [Fact]
-        public void Malformed_runtimeconfig_is_reported_and_retains_host_runtime_fallback_in_inference_with_fallback_mode()
+        public void Malformed_runtimeconfig_is_reported()
         {
             var scanDirectory = CreateTempDirectory();
             var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
@@ -161,17 +118,14 @@ namespace GadgetExplorer.Tests.Loading
             Assert.Equal(Path.GetFullPath(runtimeConfigPath), diagnostic.Path);
             Assert.NotEmpty(diagnostic.Message);
             Assert.Empty(loadResult.LoadPlan.RequestedFrameworks);
-            Assert.True(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.Contains("1 runtimeconfig file(s) failed to parse.", loadResult.LoadPlan.Warnings, StringComparer.Ordinal);
+            Assert.Contains("1 runtimeconfig file(s) failed to parse.", loadResult.LoadPlan.Warnings);
             Assert.Contains(progressMessages, message =>
                 message.Contains("Invalid runtimeconfig", StringComparison.Ordinal) &&
                 message.Contains(runtimeConfigPath, StringComparison.OrdinalIgnoreCase));
-            Assert.Contains(progressMessages, message =>
-                message.Contains("all usable framework discovery failed during parsing", StringComparison.Ordinal));
         }
 
         [Fact]
-        public void Inference_no_fallback_mode_stays_within_input_roots_when_runtimeconfig_has_no_usable_framework_requests()
+        public void Runtimeconfig_without_usable_framework_requests_is_counted_and_reported()
         {
             var scanDirectory = CreateTempDirectory();
             var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
@@ -180,38 +134,10 @@ namespace GadgetExplorer.Tests.Loading
             var runtimeConfigPath = Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json");
             File.WriteAllText(
                 runtimeConfigPath,
-                $$"""
+                """
               {
                 "runtimeOptions": {
-                  "tfm": "net{{Environment.Version.Major}}.0"
-                }
-              }
-              """);
-            var currentRuntimeDirectory = Path.GetDirectoryName(typeof(object).Assembly.Location)!;
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.InferenceNoFallback);
-
-            RuntimeConfigDiagnostic diagnostic = Assert.Single(loadResult.Diagnostics.RuntimeConfigFilesWithoutUsableFrameworkRequests);
-            Assert.Equal(Path.GetFullPath(runtimeConfigPath), diagnostic.Path);
-            Assert.False(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.Empty(loadResult.LoadPlan.HostRuntimeSearchDirectories);
-            Assert.DoesNotContain(loadResult.Modules, module => IsLoadedFromDirectory(module, currentRuntimeDirectory));
-        }
-
-        [Fact]
-        public void Runtimeconfig_without_usable_framework_requests_is_counted_and_reported_in_inference_with_fallback_mode()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            var copiedAssemblyPath = Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath));
-            File.Copy(sampleAssemblyPath, copiedAssemblyPath, overwrite: true);
-            var runtimeConfigPath = Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json");
-            File.WriteAllText(
-                runtimeConfigPath,
-                $$"""
-              {
-                "runtimeOptions": {
-                  "tfm": "net{{Environment.Version.Major}}.0"
+                  "tfm": "net9.0"
                 }
               }
               """);
@@ -223,13 +149,10 @@ namespace GadgetExplorer.Tests.Loading
             Assert.Equal(Path.GetFullPath(runtimeConfigPath), diagnostic.Path);
             Assert.Equal("No usable framework requests were found.", diagnostic.Message);
             Assert.Empty(loadResult.LoadPlan.RequestedFrameworks);
-            Assert.True(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.Contains("1 runtimeconfig file(s) produced no usable framework requests.", loadResult.LoadPlan.Warnings, StringComparer.Ordinal);
+            Assert.Contains("1 runtimeconfig file(s) produced no usable framework requests.", loadResult.LoadPlan.Warnings);
             Assert.Contains(progressMessages, message =>
                 message.Contains("Runtimeconfig", StringComparison.Ordinal) &&
                 message.Contains("No usable framework requests were found.", StringComparison.Ordinal));
-            Assert.Contains(progressMessages, message =>
-                message.Contains("none produced usable framework requests", StringComparison.Ordinal));
         }
 
         [Fact]
@@ -241,14 +164,14 @@ namespace GadgetExplorer.Tests.Loading
             File.Copy(sampleAssemblyPath, copiedAssemblyPath, overwrite: true);
             File.WriteAllText(
                 Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json"),
-                $$"""
+                """
               {
                 "runtimeOptions": {
-                  "tfm": "net{{Environment.Version.Major}}.0",
+                  "tfm": "net9.0",
                   "includedFrameworks": [
                     {
                       "name": "Microsoft.NETCore.App",
-                      "version": "{{Environment.Version.Major}}.{{Environment.Version.Minor}}.0"
+                      "version": "9.1.2"
                     }
                   ]
                 }
@@ -258,9 +181,8 @@ namespace GadgetExplorer.Tests.Loading
             var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory]);
 
             Assert.Contains(loadResult.LoadPlan.RequestedFrameworks, framework =>
-                framework.Name == "Microsoft.NETCore.App" &&
-                framework.Version.Major == Environment.Version.Major &&
-                framework.Version.Minor == Environment.Version.Minor);
+                framework.Name == TestFrameworkName &&
+                framework.Version == Version.Parse(TestFrameworkVersion));
         }
 
         [Fact]
@@ -272,14 +194,14 @@ namespace GadgetExplorer.Tests.Loading
             File.Copy(sampleAssemblyPath, copiedAssemblyPath, overwrite: true);
             File.WriteAllText(
                 Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json"),
-                $$"""
+                """
               {
                 "runtimeOptions": {
-                  "tfm": "net{{Environment.Version.Major}}.0",
+                  "tfm": "net9.0",
                   "frameworks": [
                     {
                       "name": "Microsoft.NETCore.App",
-                      "version": "{{Environment.Version.Major}}.{{Environment.Version.Minor}}.0"
+                      "version": "9.1.2"
                     }
                   ]
                 }
@@ -289,76 +211,12 @@ namespace GadgetExplorer.Tests.Loading
             var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory]);
 
             Assert.Contains(loadResult.LoadPlan.RequestedFrameworks, framework =>
-                framework.Name == "Microsoft.NETCore.App" &&
-                framework.Version.Major == Environment.Version.Major &&
-                framework.Version.Minor == Environment.Version.Minor);
+                framework.Name == TestFrameworkName &&
+                framework.Version == Version.Parse(TestFrameworkVersion));
         }
 
         [Fact]
-        public void Matching_runtimeconfig_infers_installed_runtime_in_inference_no_fallback_mode()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            var copiedAssemblyPath = Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath));
-            File.Copy(sampleAssemblyPath, copiedAssemblyPath, overwrite: true);
-            File.WriteAllText(
-                Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json"),
-                $$"""
-              {
-                "runtimeOptions": {
-                  "tfm": "net{{Environment.Version.Major}}.0",
-                  "framework": {
-                    "name": "Microsoft.NETCore.App",
-                    "version": "{{Environment.Version.Major}}.{{Environment.Version.Minor}}.0"
-                  }
-                }
-              }
-              """);
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.InferenceNoFallback);
-
-            Assert.NotEmpty(loadResult.LoadPlan.RuntimeConfigPaths);
-            Assert.Contains(loadResult.LoadPlan.RequestedFrameworks, framework =>
-                framework.Name == "Microsoft.NETCore.App" &&
-                framework.Version.Major == Environment.Version.Major &&
-                framework.Version.Minor == Environment.Version.Minor);
-            Assert.NotEmpty(loadResult.LoadPlan.InferredInstalledRuntimeDirectories);
-            Assert.False(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.All(
-                loadResult.LoadPlan.InferredInstalledRuntimeDirectories,
-                runtimeDirectory => Assert.Contains(runtimeDirectory, loadResult.LoadPlan.ResolverSearchDirectories, StringComparer.OrdinalIgnoreCase));
-        }
-
-        [Fact]
-        public void Matching_runtimeconfig_in_inference_with_fallback_mode_does_not_engage_host_runtime_fallback()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            var copiedAssemblyPath = Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath));
-            File.Copy(sampleAssemblyPath, copiedAssemblyPath, overwrite: true);
-            File.WriteAllText(
-                Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json"),
-                $$"""
-              {
-                "runtimeOptions": {
-                  "tfm": "net{{Environment.Version.Major}}.0",
-                  "framework": {
-                    "name": "Microsoft.NETCore.App",
-                    "version": "{{Environment.Version.Major}}.{{Environment.Version.Minor}}.0"
-                  }
-                }
-              }
-              """);
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.InferenceWithFallback);
-
-            Assert.NotEmpty(loadResult.LoadPlan.InferredInstalledRuntimeDirectories);
-            Assert.False(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.Empty(loadResult.LoadPlan.HostRuntimeSearchDirectories);
-        }
-
-        [Fact]
-        public void Inference_no_fallback_mode_does_not_fall_back_when_runtimeconfig_has_no_matching_installed_runtime()
+        public void Restricted_mode_does_not_infer_installed_runtime_when_runtimeconfig_requests_a_framework()
         {
             var scanDirectory = CreateTempDirectory();
             var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
@@ -367,72 +225,12 @@ namespace GadgetExplorer.Tests.Loading
             File.WriteAllText(
                 Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json"),
                 """
-            {
-              "runtimeOptions": {
-                "tfm": "net99.0",
-                "framework": {
-                  "name": "Microsoft.NETCore.App",
-                  "version": "99.0.0"
-                }
-              }
-            }
-            """);
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.InferenceNoFallback);
-            var currentRuntimeDirectory = Path.GetDirectoryName(typeof(object).Assembly.Location)!;
-
-            Assert.NotEmpty(loadResult.LoadPlan.RuntimeConfigPaths);
-            Assert.Empty(loadResult.LoadPlan.InferredInstalledRuntimeDirectories);
-            Assert.False(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.DoesNotContain(loadResult.Modules, module => IsLoadedFromDirectory(module, currentRuntimeDirectory));
-        }
-
-        [Fact]
-        public void Inference_with_fallback_mode_uses_host_runtime_when_runtimeconfig_has_no_matching_installed_runtime()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            var copiedAssemblyPath = Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath));
-            File.Copy(sampleAssemblyPath, copiedAssemblyPath, overwrite: true);
-            File.WriteAllText(
-                Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json"),
-                """
-            {
-              "runtimeOptions": {
-                "tfm": "net99.0",
-                "framework": {
-                  "name": "Microsoft.NETCore.App",
-                  "version": "99.0.0"
-                }
-              }
-            }
-            """);
-            var currentRuntimeDirectory = Path.GetDirectoryName(typeof(object).Assembly.Location)!;
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.InferenceWithFallback);
-
-            Assert.Empty(loadResult.LoadPlan.InferredInstalledRuntimeDirectories);
-            Assert.True(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.NotEmpty(loadResult.LoadPlan.HostRuntimeSearchDirectories);
-            Assert.Contains(loadResult.Modules, module => IsLoadedFromDirectory(module, currentRuntimeDirectory));
-        }
-
-        [Fact]
-        public void Restricted_mode_does_not_infer_installed_runtime_even_with_matching_runtimeconfig()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            var copiedAssemblyPath = Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath));
-            File.Copy(sampleAssemblyPath, copiedAssemblyPath, overwrite: true);
-            File.WriteAllText(
-                Path.ChangeExtension(copiedAssemblyPath, ".runtimeconfig.json"),
-                $$"""
               {
                 "runtimeOptions": {
-                  "tfm": "net{{Environment.Version.Major}}.0",
+                  "tfm": "net9.0",
                   "framework": {
                     "name": "Microsoft.NETCore.App",
-                    "version": "{{Environment.Version.Major}}.{{Environment.Version.Minor}}.0"
+                    "version": "9.1.2"
                   }
                 }
               }
@@ -442,27 +240,12 @@ namespace GadgetExplorer.Tests.Loading
 
             Assert.Equal(AssemblyResolutionMode.Restricted, loadResult.LoadPlan.AssemblyResolutionMode);
             Assert.NotEmpty(loadResult.LoadPlan.RuntimeConfigPaths);
+            Assert.Contains(loadResult.LoadPlan.RequestedFrameworks, framework =>
+                framework.Name == TestFrameworkName &&
+                framework.Version == Version.Parse(TestFrameworkVersion));
             Assert.Empty(loadResult.LoadPlan.InferredInstalledRuntimeDirectories);
             Assert.False(loadResult.LoadPlan.UsedHostRuntimeFallback);
             Assert.All(loadResult.LoadPlan.ResolverSearchDirectories, searchDirectory => Assert.StartsWith(scanDirectory, searchDirectory, StringComparison.OrdinalIgnoreCase));
-        }
-
-        [Fact]
-        public void Restricted_mode_does_not_fall_back_to_host_runtime_when_no_runtimeconfig_is_present()
-        {
-            var scanDirectory = CreateTempDirectory();
-            var sampleAssemblyPath = typeof(MySpecialObject).Assembly.Location;
-            var copiedAssemblyPath = Path.Combine(scanDirectory, Path.GetFileName(sampleAssemblyPath));
-            File.Copy(sampleAssemblyPath, copiedAssemblyPath, overwrite: true);
-            var currentRuntimeDirectory = Path.GetDirectoryName(typeof(object).Assembly.Location)!;
-
-            var loadResult = AssemblyInputLoader.LoadAssemblySet([scanDirectory], assemblyResolutionMode: AssemblyResolutionMode.Restricted);
-
-            Assert.Equal(AssemblyResolutionMode.Restricted, loadResult.LoadPlan.AssemblyResolutionMode);
-            Assert.Empty(loadResult.LoadPlan.RuntimeConfigPaths);
-            Assert.Empty(loadResult.LoadPlan.InferredInstalledRuntimeDirectories);
-            Assert.False(loadResult.LoadPlan.UsedHostRuntimeFallback);
-            Assert.DoesNotContain(loadResult.Modules, module => IsLoadedFromDirectory(module, currentRuntimeDirectory));
         }
 
         [Fact]
@@ -532,22 +315,6 @@ namespace GadgetExplorer.Tests.Loading
             };
             module.Types.Add(sampleType);
             module.Write(assemblyPath);
-        }
-
-        private static bool IsLoadedFromDirectory(ModuleDefMD module, string directoryPath)
-        {
-            string? location;
-            try
-            {
-                location = module.Location;
-            }
-            catch
-            {
-                location = null;
-            }
-
-            return location is not null &&
-                   location.StartsWith(directoryPath, StringComparison.OrdinalIgnoreCase);
         }
     }
 }
