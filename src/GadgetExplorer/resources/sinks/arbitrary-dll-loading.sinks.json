@@ -1,0 +1,700 @@
+{
+    "sinks": [
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.AppDomain",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.AppDomain",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.Policy.Evidence",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.AppDomain",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.AppDomain",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "LoadLibraryA"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "LoadLibraryW"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "LoadLibraryEx*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "LoadPackagedLibrary"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "GetProcAddress"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "AddDllDirectory"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "SetDllDirectory*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "SetDefaultDllDirectories"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "LdrLoadDll"
+        },
+        {
+            "declaringType": "System.Reflection.Assembly",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.Assembly",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": true
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.Assembly",
+            "methodName": "LoadFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.Assembly",
+            "methodName": "LoadFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.AssemblyHashAlgorithm",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.Assembly",
+            "methodName": "LoadFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.Assembly",
+            "methodName": "UnsafeLoadFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": true
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.Policy.Evidence",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": true
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.Policy.Evidence",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.Policy.Evidence",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "CreateInstanceFrom",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.Policy.Evidence",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Loader.AssemblyLoadContext",
+            "methodName": "LoadFromAssemblyName",
+            "parameters": [
+                {
+                    "typeName": "System.Reflection.AssemblyName",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Loader.AssemblyLoadContext",
+            "methodName": "LoadFromAssemblyPath",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Loader.AssemblyLoadContext",
+            "methodName": "LoadFromStream",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Loader.AssemblyLoadContext",
+            "methodName": "LoadFromStream",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        }
+    ]
+}

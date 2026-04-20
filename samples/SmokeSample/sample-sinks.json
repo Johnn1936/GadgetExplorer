@@ -1,0 +1,8 @@
+{
+  "sinks": [
+    {
+      "declaringType": "MySpecialObject",
+      "methodName": "SayHello"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "name": "MessagePackTypeless",
+  "rootTypeEligibility": {
+    "allowedTypeVisibilities": [
+      "Public",
+      "Internal",
+      "Protected",
+      "ProtectedInternal",
+      "PrivateProtected",
+      "Private"
+    ]
+  },
+  "triggerPolicy": {
+    "supportsFinalizers": true,
+    "allowedPropertySetterVisibilities": [
+      "Public",
+      "Private",
+      "Family",
+      "Assembly",
+      "FamilyOrAssembly",
+      "FamilyAndAssembly"
+    ]
+  },
+  "activationPolicies": [
+    {
+      "mode": "ConstructorSelection",
+      "preferredConstructorAttributeTypeNames": [
+        "MessagePack.SerializationConstructorAttribute"
+      ],
+      "allowedConstructorVisibilities": [
+        "Public"
+      ],
+      "constructorBindingModes": [
+        "Name",
+        "Index"
+      ],
+      "indexedMemberAttributeTypeNames": [
+        "MessagePack.KeyAttribute"
+      ],
+      "constructorSelectionRules": [
+        {
+          "when": {
+            "attributedConstructorCount": 1
+          },
+          "target": "Attributed"
+        },
+        {
+          "when": {},
+          "target": "BestMatch"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "HasAttribute",
+          "typeName": "MessagePack.MessagePackObjectAttribute"
+        }
+      ]
+    },
+    {
+      "mode": "ConstructorSelection",
+      "preferredConstructorAttributeTypeNames": [
+        "MessagePack.SerializationConstructorAttribute"
+      ],
+      "allowedConstructorVisibilities": [
+        "Public"
+      ],
+      "constructorBindingModes": [
+        "Name"
+      ],
+      "constructorSelectionRules": [
+        {
+          "when": {
+            "attributedConstructorCount": 1
+          },
+          "target": "Attributed"
+        },
+        {
+          "when": {},
+          "target": "BestMatch"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "HasAttribute",
+          "typeName": "System.Runtime.Serialization.DataContractAttribute"
+        }
+      ]
+    },
+    {
+      "mode": "ConstructorSelection",
+      "preferredConstructorAttributeTypeNames": [
+        "MessagePack.SerializationConstructorAttribute"
+      ],
+      "allowedConstructorVisibilities": [
+        "Public",
+        "Private",
+        "Family",
+        "Assembly",
+        "FamilyOrAssembly",
+        "FamilyAndAssembly"
+      ],
+      "constructorBindingModes": [
+        "Name"
+      ],
+      "constructorSelectionRules": [
+        {
+          "when": {
+            "attributedConstructorCount": 1
+          },
+          "target": "Attributed"
+        },
+        {
+          "when": {},
+          "target": "BestMatch"
+        }
+      ],
+      "requirements": [
+        {
+          "kind": "LacksAttribute",
+          "typeName": "MessagePack.MessagePackObjectAttribute"
+        },
+        {
+          "kind": "LacksAttribute",
+          "typeName": "System.Runtime.Serialization.DataContractAttribute"
+        }
+      ]
+    }
+  ],
+  "callbacks": {
+    "attributeCallbacks": [],
+    "interfaceCallbacks": [
+      {
+        "interfaceTypeName": "MessagePack.IMessagePackSerializationCallbackReceiver",
+        "methodName": "OnAfterDeserialize",
+        "parameterTypeNames": [],
+        "returnTypeName": "System.Void"
+      }
+    ]
+  }
+}

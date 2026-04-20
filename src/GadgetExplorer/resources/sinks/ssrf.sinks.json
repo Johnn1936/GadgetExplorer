@@ -1,0 +1,2676 @@
+{
+    "sinks": [
+        {
+            "nativeModule": "winhttp",
+            "nativeEntryPoint": "WinHttpOpen"
+        },
+        {
+            "nativeModule": "winhttp",
+            "nativeEntryPoint": "WinHttpConnect"
+        },
+        {
+            "nativeModule": "winhttp",
+            "nativeEntryPoint": "WinHttpOpenRequest"
+        },
+        {
+            "nativeModule": "winhttp",
+            "nativeEntryPoint": "WinHttpSendRequest"
+        },
+        {
+            "nativeModule": "winhttp",
+            "nativeEntryPoint": "WinHttpWriteData"
+        },
+        {
+            "nativeModule": "winhttp",
+            "nativeEntryPoint": "WinHttpReadData"
+        },
+        {
+            "nativeModule": "winhttp",
+            "nativeEntryPoint": "WinHttpReceiveResponse"
+        },
+        {
+            "nativeModule": "wininet",
+            "nativeEntryPoint": "InternetOpen*"
+        },
+        {
+            "nativeModule": "wininet",
+            "nativeEntryPoint": "InternetConnect*"
+        },
+        {
+            "nativeModule": "wininet",
+            "nativeEntryPoint": "HttpOpenRequest*"
+        },
+        {
+            "nativeModule": "wininet",
+            "nativeEntryPoint": "HttpSendRequest*"
+        },
+        {
+            "nativeModule": "wininet",
+            "nativeEntryPoint": "InternetReadFile"
+        },
+        {
+            "nativeModule": "urlmon",
+            "nativeEntryPoint": "URLDownloadToFile*"
+        },
+        {
+            "declaringType": "System.Net.WebRequest",
+            "methodName": "Create",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebRequest",
+            "methodName": "Create",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebRequest",
+            "methodName": "CreateDefault",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebRequest",
+            "methodName": "CreateHttp",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebRequest",
+            "methodName": "CreateHttp",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebSockets.ClientWebSocket",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebSockets.ClientWebSocket",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpMessageInvoker",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "DeleteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "DeleteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "DeleteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "DeleteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpCompletionOption",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpCompletionOption",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpCompletionOption",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpCompletionOption",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetByteArrayAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetByteArrayAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetStreamAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetStreamAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetStringAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "GetStringAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PatchAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PatchAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PatchAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PatchAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PostAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PostAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PostAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PostAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PutAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PutAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PutAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "PutAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpContent",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Http.HttpRequestMessage",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Http.HttpRequestMessage",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpCompletionOption",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Http.HttpRequestMessage",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpCompletionOption",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Http.HttpRequestMessage",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Http.HttpRequestMessage",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Http.HttpRequestMessage",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpCompletionOption",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Http.HttpRequestMessage",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Http.HttpCompletionOption",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Http.HttpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Http.HttpRequestMessage",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.HttpWebRequest",
+            "methodName": "BeginGetRequestStream",
+            "parameters": [
+                {
+                    "typeName": "System.AsyncCallback",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.HttpWebRequest",
+            "methodName": "BeginGetResponse",
+            "parameters": [
+                {
+                    "typeName": "System.AsyncCallback",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.HttpWebRequest",
+            "methodName": "GetRequestStream",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.Net.HttpWebRequest",
+            "methodName": "GetRequestStream",
+            "parameters": [
+                {
+                    "typeName": "System.Net.TransportContext&",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Mail.SmtpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Mail.MailMessage",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Mail.SmtpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Mail.SmtpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Mail.MailMessage",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Mail.SmtpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Mail.SmtpClient",
+            "methodName": "SendMailAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Mail.MailMessage",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Mail.SmtpClient",
+            "methodName": "SendMailAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.Net.EndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.EndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Sockets.SocketAsyncEventArgs",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Sockets.SocketType",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.ProtocolType",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketAsyncEventArgs",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketError&",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Collections.Generic.IList`1<System.ArraySegment`1<System.Byte>>",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Collections.Generic.IList`1<System.ArraySegment`1<System.Byte>>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Collections.Generic.IList`1<System.ArraySegment`1<System.Byte>>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketError&",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.ArraySegment`1<System.Byte>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Collections.Generic.IList`1<System.ArraySegment`1<System.Byte>>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Sockets.SocketAsyncEventArgs",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.TransmitFileOptions",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendPacketsAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Sockets.SocketAsyncEventArgs",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendTo",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.EndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendTo",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.EndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendTo",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.EndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendTo",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.EndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendToAsync",
+            "parameters": [
+                {
+                    "typeName": "System.ArraySegment`1<System.Byte>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.Sockets.SocketFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.EndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.Socket",
+            "methodName": "SendToAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.Sockets.SocketAsyncEventArgs",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.TcpClient",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.TcpClient",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.TcpClient",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPEndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.TcpClient",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.TcpClient",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.TcpClient",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.TcpClient",
+            "methodName": "ConnectAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPAddress",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.Net.IPEndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "Connect",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.IPEndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "Send",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Net.IPEndPoint",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.Sockets.UdpClient",
+            "methodName": "SendAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadData",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadData",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadDataAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadDataAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadDataTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadDataTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadFile",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadFileAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadFileAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadFileTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadFileTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadString",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadString",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadStringAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadStringAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadStringTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "DownloadStringTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenRead",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenRead",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenReadAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenReadAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenReadTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenReadTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWrite",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWrite",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWrite",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWrite",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWriteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWriteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWriteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWriteTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWriteTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWriteTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "OpenWriteTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadData",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadData",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadData",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadData",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadDataAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadDataAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadDataAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadDataTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadDataTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadDataTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadDataTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFile",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFile",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFileAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFileAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFileAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFileTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFileTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFileTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadFileTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadString",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadString",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadString",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadString",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadStringAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadStringAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadStringAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadStringTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadStringTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadStringTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadStringTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValues",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValues",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValues",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValues",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValuesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValuesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValuesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValuesTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValuesTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValuesTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.WebClient",
+            "methodName": "UploadValuesTaskAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Specialized.NameValueCollection",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Net.HttpWebRequest",
+            "methodName": "GetRequestStreamAsync",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.Net.HttpWebRequest",
+            "methodName": "GetResponse",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.Net.HttpWebRequest",
+            "methodName": "GetResponseAsync",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.Net.WebRequest",
+            "methodName": "GetResponse",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.Net.WebRequest",
+            "methodName": "GetResponseAsync",
+            "parameters": []
+        }
+    ]
+}

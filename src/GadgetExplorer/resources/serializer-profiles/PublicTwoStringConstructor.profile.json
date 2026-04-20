@@ -1,0 +1,28 @@
+{
+  "name": "PublicTwoStringConstructor",
+  "rootTypeEligibility": {
+    "allowedTypeVisibilities": [
+      "PubliclyVisible"
+    ]
+  },
+  "triggerPolicy": {
+    "supportsFinalizers": true,
+    "allowedPropertySetterVisibilities": []
+  },
+  "activationPolicies": [
+    {
+      "mode": "ExactSignatureConstructor",
+      "exactConstructorSignature": {
+        "requirePublic": true,
+        "parameterTypeNames": [
+          "System.String",
+          "System.String"
+        ]
+      }
+    }
+  ],
+  "callbacks": {
+    "attributeCallbacks": [],
+    "interfaceCallbacks": []
+  }
+}

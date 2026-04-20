@@ -1,0 +1,60 @@
+{
+  "name": "XmlSerializer",
+  "rootTypeEligibility": {
+    "allowedTypeVisibilities": [
+      "PubliclyVisible"
+    ]
+  },
+  "triggerPolicy": {
+    "supportsFinalizers": true,
+    "allowedPropertyGetterVisibilities": [],
+    "allowedPropertySetterVisibilities": [
+      "Public"
+    ]
+  },
+  "activationPolicies": [
+    {
+      "mode": "ConstructorSelection",
+      "constructorSelectionRules": [
+        {
+          "when": {
+            "publicParameterlessCount": 1
+          },
+          "target": "PublicParameterless"
+        },
+        {
+          "when": {
+            "publicParameterlessCount": 0,
+            "nonPublicParameterlessCount": 1
+          },
+          "target": "NonPublicParameterless"
+        }
+      ],
+      "ordinaryObjectMapping": {
+        "ignoredDeclaringTypeInterfaceNames": [
+          "System.Xml.Serialization.IXmlSerializable"
+        ],
+        "rejectPublicFieldsOrSettablePropertiesOfInterfaceTypes": true,
+        "rejectedPublicFieldOrSettablePropertyTypeNames": [
+          "System.Type"
+        ]
+      }
+    }
+  ],
+  "callbacks": {
+    "attributeCallbacks": [],
+    "interfaceCallbacks": []
+  },
+  "customDeserializationMethods": {
+    "interfaceMethods": [
+      {
+        "interfaceTypeName": "System.Xml.Serialization.IXmlSerializable",
+        "methodName": "ReadXml",
+        "parameterTypeNames": [
+          "System.Xml.XmlReader"
+        ],
+        "returnTypeName": "System.Void"
+      }
+    ]
+  }
+}

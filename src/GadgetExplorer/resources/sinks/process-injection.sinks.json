@@ -1,0 +1,80 @@
+{
+    "sinks": [
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "VirtualAlloc*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "VirtualProtect*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateFileMapping*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "MapViewOfFile*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "WriteProcessMemory"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "ReadProcessMemory"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateRemoteThread*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "QueueUserAPC"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "SetThreadContext"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "ResumeThread"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtOpenProcess"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtCreateSection"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtMapViewOfSection"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtProtectVirtualMemory"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtWriteVirtualMemory"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtReadVirtualMemory"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtCreateThreadEx"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtQueueApcThread"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "RtlCreateUserThread"
+        }
+    ]
+}

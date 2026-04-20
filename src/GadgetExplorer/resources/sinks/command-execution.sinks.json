@@ -1,0 +1,252 @@
+{
+    "sinks": [
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateProcess*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "CreateProcessAsUser*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "CreateProcessWithLogonW"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "CreateProcessWithTokenW"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "WinExec"
+        },
+        {
+            "nativeModule": "shell32",
+            "nativeEntryPoint": "ShellExecuteA"
+        },
+        {
+            "nativeModule": "shell32",
+            "nativeEntryPoint": "ShellExecuteW"
+        },
+        {
+            "nativeModule": "shell32",
+            "nativeEntryPoint": "ShellExecuteEx*"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtCreateUserProcess"
+        },
+        {
+            "declaringType": "System.Management.Automation.PowerShell",
+            "methodName": "AddScript",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.Automation.PowerShell",
+            "methodName": "AddScript",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Microsoft.VisualBasic.Interaction",
+            "methodName": "Shell",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "Microsoft.VisualBasic.AppWinStyle",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Diagnostics.Process",
+            "methodName": "Start",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.Diagnostics.Process",
+            "methodName": "Start",
+            "parameters": [
+                {
+                    "typeName": "System.Diagnostics.ProcessStartInfo",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Diagnostics.Process",
+            "methodName": "Start",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Diagnostics.Process",
+            "methodName": "Start",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Diagnostics.Process",
+            "methodName": "Start",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.SecureString",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Diagnostics.Process",
+            "methodName": "Start",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.SecureString",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.Automation.PowerShell",
+            "methodName": "Invoke",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.Management.Automation.PowerShell",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Collections.IEnumerable",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.Automation.PowerShell",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Collections.IEnumerable",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IList`1<T>",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.Automation.PowerShell",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Collections.IEnumerable",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IList`1<T>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.Automation.PSInvocationSettings",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.Automation.PowerShell",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Collections.IEnumerable",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.Automation.PSInvocationSettings",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.Automation.PowerShell",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Management.Automation.PSDataCollection`1<TInput>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.Automation.PSDataCollection`1<TOutput>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.Automation.PSInvocationSettings",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        }
+    ]
+}

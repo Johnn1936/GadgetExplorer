@@ -1,0 +1,32 @@
+{
+    "sinks": [
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "OpenSCManager*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "CreateService*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "ChangeServiceConfig*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "StartServiceA"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "StartServiceW"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "DeleteService"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtLoadDriver"
+        }
+    ]
+}

@@ -1,0 +1,318 @@
+{
+    "sinks": [
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.HeaderHandler",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.HeaderHandler",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.HeaderHandler",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.IMethodCallMessage",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.HeaderHandler",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.IMethodCallMessage",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "methodName": "DeserializeMethodResponse",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.HeaderHandler",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.IMethodCallMessage",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "methodName": "UnsafeDeserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.HeaderHandler",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "methodName": "UnsafeDeserializeMethodResponse",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.HeaderHandler",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.IMethodCallMessage",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Web.Script.Serialization.JavaScriptSerializer",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Web.Script.Serialization.JavaScriptSerializer",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Type",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Web.Script.Serialization.JavaScriptSerializer",
+            "methodName": "DeserializeObject",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.DataContractSerializer",
+            "methodName": "ReadObject",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.DataContractSerializer",
+            "methodName": "ReadObject",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlDictionaryReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.DataContractSerializer",
+            "methodName": "ReadObject",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlDictionaryReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.DataContractSerializer",
+            "methodName": "ReadObject",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlDictionaryReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Serialization.DataContractResolver",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.DataContractSerializer",
+            "methodName": "ReadObject",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.DataContractSerializer",
+            "methodName": "ReadObject",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Soap.SoapFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.Formatters.Soap.SoapFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Runtime.Remoting.Messaging.HeaderHandler",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Runtime.Serialization.NetDataContractSerializer",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Web.UI.LosFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Web.UI.LosFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.IO.TextReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Web.UI.LosFormatter",
+            "methodName": "Deserialize",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        }
+    ]
+}

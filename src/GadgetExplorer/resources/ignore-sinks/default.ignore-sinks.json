@@ -1,0 +1,992 @@
+{
+  "sinks": [
+    {
+      "declaringType": "Interop+Kernel32",
+      "methodName": "CloseHandle",
+      "parameters": [
+        {
+          "typeName": "System.IntPtr"
+        }
+      ]
+    },
+    {
+      "declaringType": "WinRT.ExceptionHelpers",
+      "methodName": "ThrowExceptionForHR",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        }
+      ]
+    },
+    {
+      "declaringType": "WinRT.ObjectReference`1",
+      "methodName": "<GetVtable>g__GetVtableForJitEnvironment|11_0",
+      "parameters": [
+        {
+          "typeName": "System.IntPtr"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".cctor",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Collections.Generic.IEnumerable`1<System.Diagnostics.StackFrame>"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Diagnostics.StackFrame"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Exception"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Exception"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Exception"
+        },
+        {
+          "typeName": "System.Int32"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Exception"
+        },
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "<TryResolveStateMachineMethod>g__GetDeclaredMethods|34_0",
+      "parameters": [
+        {
+          "typeName": "System.Type"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "CalculateFramesToSkip",
+      "parameters": [
+        {
+          "typeName": "System.Diagnostics.StackFrameHelper"
+        },
+        {
+          "typeName": "System.Int32"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "CaptureStackTrace",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Boolean"
+        },
+        {
+          "typeName": "System.Exception"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "GetCustomAttributesSafe",
+      "parameters": [
+        {
+          "typeName": "System.Reflection.MemberInfo"
+        },
+        {
+          "typeName": "System.Type"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "GetFrame",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "GetFrames",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "GetStackFramesInternal",
+      "parameters": [
+        {
+          "typeName": "System.Diagnostics.StackFrameHelper"
+        },
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Boolean"
+        },
+        {
+          "typeName": "System.Exception"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "InitializeForCurrentThread",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "InitializeForException",
+      "parameters": [
+        {
+          "typeName": "System.Exception"
+        },
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "InitializeIsSupported",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "IsDefinedSafe",
+      "parameters": [
+        {
+          "typeName": "System.Reflection.MemberInfo"
+        },
+        {
+          "typeName": "System.Type"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "ShowInStackTrace",
+      "parameters": [
+        {
+          "typeName": "System.Reflection.MethodBase"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "ToString",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "ToString",
+      "parameters": [
+        {
+          "typeName": "System.Diagnostics.StackTrace+TraceFormat"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "ToString",
+      "parameters": [
+        {
+          "typeName": "System.Diagnostics.StackTrace+TraceFormat"
+        },
+        {
+          "typeName": "System.Text.StringBuilder"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "TryResolveStateMachineMethod",
+      "parameters": [
+        {
+          "typeName": "System.Reflection.MethodBase"
+        },
+        {
+          "typeName": "System.Type"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "get_FrameCount",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Diagnostics.StackTrace",
+      "methodName": "get_IsSupported",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Diagnostics.Tracing.EventSource",
+      "methodName": "WriteEventCore",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Diagnostics.Tracing.EventSource+EventData"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": ".cctor",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CultureData"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": ".ctor",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "AsyncLocalSetCurrentCulture",
+      "parameters": [
+        {
+          "typeName": "System.Threading.AsyncLocalValueChangedArgs`1"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "AsyncLocalSetCurrentUICulture",
+      "parameters": [
+        {
+          "typeName": "System.Threading.AsyncLocalValueChangedArgs`1"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "ClearCachedData",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "Clone",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "CreateCultureInfoNoThrow",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "CreateSpecificCulture",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "Equals",
+      "parameters": [
+        {
+          "typeName": "System.Object"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCalendarInstance",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CalendarId"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCalendarInstanceRare",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CalendarId"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetConsoleFallbackUICulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCultureByName",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCultureInfo",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCultureInfo",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCultureInfo",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCultureInfo",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCultureInfoByIetfLanguageTag",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCultureNotSupportedExceptionMessage",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetCultures",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CultureTypes"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetFormat",
+      "parameters": [
+        {
+          "typeName": "System.Type"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetHashCode",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetUserDefaultCulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetUserDefaultLocaleName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "GetUserDefaultUICulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "InitializeUserDefaultCulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "InitializeUserDefaultUICulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "ReadOnly",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CultureInfo"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "ToString",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "VerifyCultureName",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CultureInfo"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "VerifyCultureName",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.Boolean"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "VerifyWritable",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_CachedCulturesByLcid",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_CachedCulturesByName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_Calendar",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_CompareInfo",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_CultureTypes",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_CurrentCulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_CurrentUICulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_DateTimeFormat",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_DefaultThreadCurrentCulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_DefaultThreadCurrentUICulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_DisplayName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_EnglishName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_HasInvariantCultureName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_IetfLanguageTag",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_InstalledUICulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_InteropName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_InvariantCulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_IsNeutralCulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_IsReadOnly",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_KeyboardLayoutId",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_LCID",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_Name",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_NativeName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_NumberFormat",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_OptionalCalendars",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_Parent",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_SortName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_TextInfo",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_ThreeLetterISOLanguageName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_ThreeLetterWindowsLanguageName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_TwoLetterISOLanguageName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_UseUserOverride",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_UserDefaultLocaleName",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "get_UserDefaultUICulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "set_CurrentCulture",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CultureInfo"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "set_CurrentUICulture",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CultureInfo"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "set_DateTimeFormat",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.DateTimeFormatInfo"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "set_DefaultThreadCurrentCulture",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CultureInfo"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "set_DefaultThreadCurrentUICulture",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.CultureInfo"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "set_NumberFormat",
+      "parameters": [
+        {
+          "typeName": "System.Globalization.NumberFormatInfo"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Globalization.CultureInfo",
+      "methodName": "set_UserDefaultLocaleName",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Private.Windows.Core.Resources.SR",
+      "methodName": "GetResourceString",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Resources.ResourceManager",
+      "methodName": "GetString",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Resources.ResourceManager",
+      "methodName": "GetString",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.Globalization.CultureInfo"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.SR",
+      "methodName": "GetResourceString",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.SR",
+      "methodName": "GetResourceString",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Text.Encoding",
+      "methodName": "GetEncoding",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Text.Encoding",
+      "methodName": "GetEncoding",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Text.Encoding",
+      "methodName": "GetEncoding",
+      "parameters": [
+        {
+          "typeName": "System.Int32"
+        },
+        {
+          "typeName": "System.Text.EncoderFallback"
+        },
+        {
+          "typeName": "System.Text.DecoderFallback"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Text.Encoding",
+      "methodName": "GetEncoding",
+      "parameters": [
+        {
+          "typeName": "System.String"
+        },
+        {
+          "typeName": "System.Text.EncoderFallback"
+        },
+        {
+          "typeName": "System.Text.DecoderFallback"
+        }
+      ]
+    },
+    {
+      "declaringType": "System.Threading.Thread",
+      "methodName": "get_CurrentCulture",
+      "parameters": []
+    },
+    {
+      "declaringType": "System.Threading.Thread",
+      "methodName": "get_CurrentUICulture",
+      "parameters": []
+    }
+  ]
+}

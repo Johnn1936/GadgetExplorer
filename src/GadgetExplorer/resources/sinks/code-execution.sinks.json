@@ -1,0 +1,986 @@
+{
+    "sinks": [
+        {
+            "declaringType": "System.Reflection.MethodBase",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.MethodBase",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.MethodInfo",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.RuntimeMethodInfo",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.MethodInfo",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Type",
+            "methodName": "InvokeMember",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Type",
+            "methodName": "InvokeMember",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Type",
+            "methodName": "InvokeMember",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.ParameterModifier[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.ConstructorInfo",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.ConstructorInfo",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.ConstructorInfo",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Reflection.ConstructorInfo",
+            "methodName": "Invoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.Type",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.Type",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.Type",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.Type",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.Type",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Activator",
+            "methodName": "CreateInstance",
+            "parameters": [
+                {
+                    "typeName": "System.Type",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.BindingFlags",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Reflection.Binder",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Globalization.CultureInfo",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "nativeModule": "ole32",
+            "nativeEntryPoint": "CoCreateInstance"
+        },
+        {
+            "nativeModule": "ole32",
+            "nativeEntryPoint": "CoCreateInstanceEx"
+        },
+        {
+            "nativeModule": "ole32",
+            "nativeEntryPoint": "CoGetClassObject"
+        },
+        {
+            "nativeModule": "ole32",
+            "nativeEntryPoint": "CLSIDFromProgID*"
+        },
+        {
+            "nativeModule": "ole32",
+            "nativeEntryPoint": "CLSIDFromString"
+        },
+        {
+            "nativeModule": "oleaut32",
+            "nativeEntryPoint": "LoadTypeLib*"
+        },
+        {
+            "nativeModule": "ole32",
+            "nativeEntryPoint": "OleLoadFromStream"
+        },
+        {
+            "nativeModule": "ole32",
+            "nativeEntryPoint": "MkParseDisplayName"
+        },
+        {
+            "nativeModule": "oleaut32",
+            "nativeEntryPoint": "DispCallFunc"
+        },
+        {
+            "declaringType": "Microsoft.CSharp.CSharpCodeProvider",
+            "methodName": "CompileAssemblyFromSource",
+            "parameters": [
+                {
+                    "typeName": "System.CodeDom.Compiler.CompilerParameters",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Microsoft.CSharp.CSharpCodeProvider",
+            "methodName": "CompileAssemblyFromFile",
+            "parameters": [
+                {
+                    "typeName": "System.CodeDom.Compiler.CompilerParameters",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Windows.Markup.ParserContext",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Windows.Markup.ParserContext",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xaml.XamlReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Parse",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Parse",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Parse",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Windows.Markup.ParserContext",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Markup.XamlReader",
+            "methodName": "Parse",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Windows.Markup.ParserContext",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xaml.XamlServices",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xaml.XamlServices",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.IO.TextReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xaml.XamlServices",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xaml.XamlServices",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xaml.XamlReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xaml.XamlServices",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xaml.XamlServices",
+            "methodName": "Parse",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Application",
+            "methodName": "LoadComponent",
+            "parameters": [
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Windows.Application",
+            "methodName": "LoadComponent",
+            "parameters": [
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Uri",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Delegate",
+            "methodName": "DynamicInvoke",
+            "parameters": [
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Delegate",
+            "methodName": "DynamicInvokeImpl",
+            "parameters": [
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "ExecuteAssembly",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "ExecuteAssembly",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "ExecuteAssembly",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Configuration.Assemblies.AssemblyHashAlgorithm",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "ExecuteAssembly",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.Policy.Evidence",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "ExecuteAssembly",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.Policy.Evidence",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.AppDomain",
+            "methodName": "ExecuteAssembly",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.Policy.Evidence",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Configuration.Assemblies.AssemblyHashAlgorithm",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.ManagementObject",
+            "methodName": "InvokeMethod",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.ManagementObject",
+            "methodName": "InvokeMethod",
+            "parameters": [
+                {
+                    "typeName": "System.Management.ManagementOperationObserver",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.ManagementObject",
+            "methodName": "InvokeMethod",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.ManagementBaseObject",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.InvokeMethodOptions",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.ManagementObject",
+            "methodName": "InvokeMethod",
+            "parameters": [
+                {
+                    "typeName": "System.Management.ManagementOperationObserver",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.ManagementBaseObject",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.InvokeMethodOptions",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.ManagementClass",
+            "methodName": "InvokeMethod",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.ManagementClass",
+            "methodName": "InvokeMethod",
+            "parameters": [
+                {
+                    "typeName": "System.Management.ManagementOperationObserver",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.ManagementClass",
+            "methodName": "InvokeMethod",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.ManagementBaseObject",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.InvokeMethodOptions",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Management.ManagementClass",
+            "methodName": "InvokeMethod",
+            "parameters": [
+                {
+                    "typeName": "System.Management.ManagementOperationObserver",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.ManagementBaseObject",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Management.InvokeMethodOptions",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.CodeDom.Compiler.CodeDomProvider",
+            "methodName": "CompileAssemblyFromSource",
+            "parameters": [
+                {
+                    "typeName": "System.CodeDom.Compiler.CompilerParameters",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.CodeDom.Compiler.CodeDomProvider",
+            "methodName": "CompileAssemblyFromFile",
+            "parameters": [
+                {
+                    "typeName": "System.CodeDom.Compiler.CompilerParameters",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Microsoft.CodeAnalysis.CSharp.Scripting.CSharpScript",
+            "methodName": "Evaluate"
+        },
+        {
+            "declaringType": "Microsoft.CodeAnalysis.CSharp.Scripting.CSharpScript",
+            "methodName": "Run"
+        }
+    ]
+}

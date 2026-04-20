@@ -1,0 +1,94 @@
+{
+  "name": "BinaryFormatter",
+  "rootTypeEligibility": {
+    "allowedTypeVisibilities": [
+      "Public",
+      "Internal",
+      "Protected",
+      "ProtectedInternal",
+      "PrivateProtected",
+      "Private"
+    ],
+    "requirements": [
+      {
+        "kind": "HasAttribute",
+        "typeName": "System.SerializableAttribute"
+      }
+    ]
+  },
+  "triggerPolicy": {
+    "supportsFinalizers": true,
+    "allowedPropertySetterVisibilities": []
+  },
+  "activationPolicies": [
+    {
+      "mode": "UninitializedObject"
+    },
+    {
+      "mode": "SerializationConstructor",
+      "requiredDeclaringTypeInterfaceNames": [
+        "System.Runtime.Serialization.ISerializable"
+      ],
+      "serializationConstructorSignature": {
+        "visibilityPolicy": {
+          "sealedTypeAllowedVisibilities": [
+            "Public",
+            "Private",
+            "Family",
+            "Assembly",
+            "FamilyOrAssembly",
+            "FamilyAndAssembly"
+          ],
+          "unsealedTypeAllowedVisibilities": [
+            "Public",
+            "Private",
+            "Family",
+            "Assembly",
+            "FamilyOrAssembly",
+            "FamilyAndAssembly"
+          ]
+        },
+        "parameterTypeNames": [
+          "System.Runtime.Serialization.SerializationInfo",
+          "System.Runtime.Serialization.StreamingContext"
+        ]
+      }
+    }
+  ],
+  "callbacks": {
+    "attributeCallbacks": [
+      {
+        "attributeTypeName": "System.Runtime.Serialization.OnDeserializingAttribute",
+        "parameterTypeNames": [
+          "System.Runtime.Serialization.StreamingContext"
+        ],
+        "returnTypeName": "System.Void"
+      },
+      {
+        "attributeTypeName": "System.Runtime.Serialization.OnDeserializedAttribute",
+        "parameterTypeNames": [
+          "System.Runtime.Serialization.StreamingContext"
+        ],
+        "returnTypeName": "System.Void"
+      }
+    ],
+    "interfaceCallbacks": [
+      {
+        "interfaceTypeName": "System.Runtime.Serialization.IDeserializationCallback",
+        "methodName": "OnDeserialization",
+        "parameterTypeNames": [
+          "System.Object"
+        ],
+        "returnTypeName": "System.Void"
+      },
+      {
+        "interfaceTypeName": "System.Runtime.Serialization.IObjectReference",
+        "methodName": "GetRealObject",
+        "parameterTypeNames": [
+          "System.Runtime.Serialization.StreamingContext"
+        ],
+        "returnTypeName": "System.Object"
+      }
+    ]
+  }
+}

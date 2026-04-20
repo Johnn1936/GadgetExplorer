@@ -1,0 +1,60 @@
+{
+  "name": "JsonDotNetGetters",
+  "rootTypeEligibility": {
+    "allowedTypeVisibilities": [
+      "Public",
+      "Internal",
+      "Protected",
+      "ProtectedInternal",
+      "PrivateProtected",
+      "Private"
+    ]
+  },
+  "triggerPolicy": {
+    "supportsFinalizers": false,
+    "supportsConstructors": false,
+    "allowedPropertyGetterVisibilities": [
+      "Public"
+    ],
+    "allowedPropertySetterVisibilities": []
+  },
+  "activationPolicies": [
+    {
+      "mode": "ConstructorSelection",
+      "preferredConstructorAttributeTypeNames": [
+        "Newtonsoft.Json.JsonConstructorAttribute"
+      ],
+      "constructorSelectionRules": [
+        {
+          "when": {
+            "attributedConstructorCount": 1
+          },
+          "target": "Attributed"
+        },
+        {
+          "when": {
+            "publicParameterlessCount": 1
+          },
+          "target": "PublicParameterless"
+        },
+        {
+          "when": {
+            "publicParameterlessCount": 0,
+            "publicParameterizedCount": 1
+          },
+          "target": "SinglePublicParameterized"
+        },
+        {
+          "when": {
+            "nonPublicParameterlessCount": 1
+          },
+          "target": "NonPublicParameterless"
+        }
+      ]
+    }
+  ],
+  "callbacks": {
+    "attributeCallbacks": [],
+    "interfaceCallbacks": []
+  }
+}

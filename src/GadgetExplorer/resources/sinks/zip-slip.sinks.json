@@ -1,0 +1,118 @@
+{
+    "sinks": [
+        {
+            "declaringType": "System.IO.Compression.ZipFileExtensions",
+            "methodName": "ExtractToFile",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Compression.ZipArchiveEntry",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Compression.ZipFileExtensions",
+            "methodName": "ExtractToFile",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Compression.ZipArchiveEntry",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Formats.Tar.TarFile",
+            "methodName": "ExtractToDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Formats.Tar.TarFile",
+            "methodName": "ExtractToDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Compression.ZipFile",
+            "methodName": "ExtractToDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Compression.ZipFile",
+            "methodName": "ExtractToDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Compression.ZipFileExtensions",
+            "methodName": "ExtractToDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Compression.ZipArchive",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        }
+    ]
+}

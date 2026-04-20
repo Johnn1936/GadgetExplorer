@@ -1,0 +1,40 @@
+{
+    "sinks": [
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "RegCreateKey*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "RegOpenKey*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "RegSetValue*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "RegDeleteValue*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "RegDeleteKey*"
+        },
+        {
+            "nativeModule": "shlwapi",
+            "nativeEntryPoint": "SHDeleteKey*"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtCreateKey"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtOpenKey"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtSetValueKey"
+        }
+    ]
+}

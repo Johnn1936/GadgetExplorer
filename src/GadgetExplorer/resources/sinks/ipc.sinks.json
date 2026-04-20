@@ -1,0 +1,20 @@
+{
+    "sinks": [
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateNamedPipe*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "ConnectNamedPipe"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CallNamedPipe*"
+        },
+        {
+            "nativeModule": "advapi32",
+            "nativeEntryPoint": "ImpersonateNamedPipeClient"
+        }
+    ]
+}

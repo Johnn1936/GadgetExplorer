@@ -1,0 +1,121 @@
+{
+  "name": "JsonDotNet",
+  "rootTypeEligibility": {
+    "allowedTypeVisibilities": [
+      "Public",
+      "Internal",
+      "Protected",
+      "ProtectedInternal",
+      "PrivateProtected",
+      "Private"
+    ]
+  },
+  "triggerPolicy": {
+    "supportsFinalizers": true,
+    "allowedPropertySetterVisibilities": [
+      "Public"
+    ],
+    "nonPublicPropertySetterOptInAttributeTypeNames": [
+      "Newtonsoft.Json.JsonPropertyAttribute",
+      "System.Runtime.Serialization.DataMemberAttribute"
+    ]
+  },
+  "activationPolicies": [
+    {
+      "mode": "SerializationConstructor",
+      "requiredDeclaringTypeInterfaceNames": [
+        "System.Runtime.Serialization.ISerializable"
+      ],
+      "serializationConstructorSignature": {
+        "visibilityPolicy": {
+          "sealedTypeAllowedVisibilities": [
+            "Public",
+            "Private",
+            "Family",
+            "Assembly",
+            "FamilyOrAssembly",
+            "FamilyAndAssembly"
+          ],
+          "unsealedTypeAllowedVisibilities": [
+            "Public",
+            "Private",
+            "Family",
+            "Assembly",
+            "FamilyOrAssembly",
+            "FamilyAndAssembly"
+          ]
+        },
+        "parameterTypeNames": [
+          "System.Runtime.Serialization.SerializationInfo",
+          "System.Runtime.Serialization.StreamingContext"
+        ]
+      },
+      "requirements": [
+        {
+          "kind": "HasAttribute",
+          "typeName": "System.SerializableAttribute"
+        }
+      ]
+    },
+    {
+      "mode": "ConstructorSelection",
+      "preferredConstructorAttributeTypeNames": [
+        "Newtonsoft.Json.JsonConstructorAttribute"
+      ],
+      "constructorSelectionRules": [
+        {
+          "when": {
+            "attributedConstructorCount": 1
+          },
+          "target": "Attributed"
+        },
+        {
+          "when": {
+            "publicParameterlessCount": 1
+          },
+          "target": "PublicParameterless"
+        },
+        {
+          "when": {
+            "publicParameterlessCount": 0,
+            "publicParameterizedCount": 1
+          },
+          "target": "SinglePublicParameterized"
+        },
+        {
+          "when": {
+            "nonPublicParameterlessCount": 1
+          },
+          "target": "NonPublicParameterless"
+        }
+      ]
+    }
+  ],
+  "callbacks": {
+    "attributeCallbacks": [
+      {
+        "attributeTypeName": "System.Runtime.Serialization.OnDeserializingAttribute",
+        "parameterTypeNames": [
+          "System.Runtime.Serialization.StreamingContext"
+        ],
+        "returnTypeName": "System.Void"
+      },
+      {
+        "attributeTypeName": "System.Runtime.Serialization.OnDeserializedAttribute",
+        "parameterTypeNames": [
+          "System.Runtime.Serialization.StreamingContext"
+        ],
+        "returnTypeName": "System.Void"
+      },
+      {
+        "attributeTypeName": "Newtonsoft.Json.Serialization.OnErrorAttribute",
+        "parameterTypeNames": [
+          "System.Runtime.Serialization.StreamingContext",
+          "Newtonsoft.Json.Serialization.ErrorContext"
+        ],
+        "returnTypeName": "System.Void"
+      }
+    ],
+    "interfaceCallbacks": []
+  }
+}

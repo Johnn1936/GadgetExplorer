@@ -1,0 +1,1419 @@
+{
+    "sinks": [
+        {
+            "declaringType": "System.IO.FileStream",
+            "methodName": "BeginWrite",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.AsyncCallback",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Object",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateFileA"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateFileW"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateFile2"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateFileTransactedA"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateFileTransactedW"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CopyFile*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "MoveFile*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "ReplaceFile*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "DeleteFile*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateDirectory*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "RemoveDirectory*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateSymbolicLink*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "CreateHardLink*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "SetFileAttributes*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "BeginUpdateResource*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "UpdateResource*"
+        },
+        {
+            "nativeModule": "kernel32",
+            "nativeEntryPoint": "EndUpdateResource*"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtCreateFile"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtOpenFile"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtWriteFile"
+        },
+        {
+            "nativeModule": "ntdll",
+            "nativeEntryPoint": "NtReadFile"
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Copy",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Copy",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Move",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Move",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Directory",
+            "methodName": "CreateDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Directory",
+            "methodName": "CreateDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.AccessControl.DirectorySecurity",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Directory",
+            "methodName": "CreateDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IO.UnixFileMode",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Directory",
+            "methodName": "Delete",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Directory",
+            "methodName": "Delete",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.Directory",
+            "methodName": "Move",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileInfo",
+            "methodName": "MoveTo",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileInfo",
+            "methodName": "MoveTo",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileInfo",
+            "methodName": "CopyTo",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileInfo",
+            "methodName": "CopyTo",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.DirectoryInfo",
+            "methodName": "MoveTo",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "CopyFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "CopyFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "CopyFile",
+            "parameters": [
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "CreateDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "CreateDirectory",
+            "parameters": [
+                {
+                    "typeName": "Interop+Kernel32+SECURITY_ATTRIBUTES*",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "CreateFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IO.FileShare",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "Interop+Kernel32+SECURITY_ATTRIBUTES*",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IO.FileMode",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IntPtr",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "CreateFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IO.FileShare",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IO.FileMode",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "DeleteFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "FlushFileBuffers",
+            "parameters": [
+                {
+                    "typeName": "System.Runtime.InteropServices.SafeHandle",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "MoveFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "MoveFile",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "MoveFile",
+            "parameters": [
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "ReadFile",
+            "parameters": [
+                {
+                    "typeName": "System.Runtime.InteropServices.SafeHandle",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte*",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32&",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.NativeOverlapped*",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "ReadFile",
+            "parameters": [
+                {
+                    "typeName": "System.Runtime.InteropServices.SafeHandle",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte*",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IntPtr",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.NativeOverlapped*",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "RemoveDirectory",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "WriteFile",
+            "parameters": [
+                {
+                    "typeName": "System.IntPtr",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte*",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32&",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IntPtr",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "WriteFile",
+            "parameters": [
+                {
+                    "typeName": "System.Runtime.InteropServices.SafeHandle",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte*",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32&",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.NativeOverlapped*",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "WriteFile",
+            "parameters": [
+                {
+                    "typeName": "System.Runtime.InteropServices.SafeHandle",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte*",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IntPtr",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.NativeOverlapped*",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.DirectoryInfo",
+            "methodName": "Create",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.IO.DirectoryInfo",
+            "methodName": "Create",
+            "parameters": [
+                {
+                    "typeName": "System.Security.AccessControl.DirectorySecurity",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.DirectoryInfo",
+            "methodName": "Delete",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.IO.DirectoryInfo",
+            "methodName": "Delete",
+            "parameters": [
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllBytes",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllBytes",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.ReadOnlySpan`1<System.Byte>",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllBytesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllBytesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.ReadOnlyMemory`1<System.Byte>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllLines",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllLines",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllLinesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllLinesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllText",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllText",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllTextAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.ReadOnlyMemory`1<System.Char>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllTextAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.ReadOnlyMemory`1<System.Char>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllTextAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendAllTextAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "AppendText",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Create",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Create",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Create",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IO.FileOptions",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Create",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.IO.FileOptions",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Security.AccessControl.FileSecurity",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "CreateSymbolicLink",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "CreateSymbolicLink",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "CreateText",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Delete",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "OpenWrite",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Replace",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "Replace",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllBytes",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllBytesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllBytesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.ReadOnlyMemory`1<System.Byte>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllLines",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllLines",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllLines",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllLines",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllLinesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllLinesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllLinesAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Collections.Generic.IEnumerable`1<System.String>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllText",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllText",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllTextAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.ReadOnlyMemory`1<System.Char>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllTextAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.ReadOnlyMemory`1<System.Char>",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllTextAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Text.Encoding",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.File",
+            "methodName": "WriteAllTextAsync",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileStream",
+            "methodName": "Write",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileStream",
+            "methodName": "WriteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileStream",
+            "methodName": "WriteAsync",
+            "parameters": [
+                {
+                    "typeName": "System.Byte[]",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Int32",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Threading.CancellationToken",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileStream",
+            "methodName": "WriteByte",
+            "parameters": [
+                {
+                    "typeName": "System.Byte",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.IO.FileInfo",
+            "methodName": "Delete",
+            "parameters": []
+        }
+    ]
+}

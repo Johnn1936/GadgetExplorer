@@ -1,0 +1,14 @@
+{
+    "sinks": [
+        {
+            "declaringType": "Interop+Kernel32",
+            "methodName": "CloseHandle",
+            "parameters": [
+                {
+                    "typeName": "System.IntPtr",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        }
+    ]
+}

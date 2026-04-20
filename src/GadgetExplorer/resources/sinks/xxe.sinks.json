@@ -1,0 +1,276 @@
+{
+    "sinks": [
+        {
+            "declaringType": "System.Xml.XmlDocument",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.XmlDocument",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.IO.TextReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.XmlDocument",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.XmlDocument",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.XmlDocument",
+            "methodName": "LoadXml",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": true
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.Xsl.XslCompiledTransform",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.Xsl.XslCompiledTransform",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Xml.Xsl.XsltSettings",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Xml.XmlResolver",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.Xsl.XslCompiledTransform",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.Xsl.XslCompiledTransform",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Xml.Xsl.XsltSettings",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Xml.XmlResolver",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.Xsl.XslCompiledTransform",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XPath.IXPathNavigable",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.Xsl.XslCompiledTransform",
+            "methodName": "Load",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XPath.IXPathNavigable",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Xml.Xsl.XsltSettings",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Xml.XmlResolver",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.IO.Stream",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Data.XmlReadMode",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.IO.TextReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.IO.TextReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Data.XmlReadMode",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.String",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Data.XmlReadMode",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Data.XmlReadMode",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Data.DataSet",
+            "methodName": "ReadXml",
+            "parameters": [
+                {
+                    "typeName": "System.Xml.XmlReader",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Data.XmlReadMode",
+                    "ignoreSinkIfConstant": false
+                },
+                {
+                    "typeName": "System.Boolean",
+                    "ignoreSinkIfConstant": false
+                }
+            ]
+        },
+        {
+            "declaringType": "System.Xml.XmlTextReader",
+            "methodName": "Read",
+            "parameters": []
+        },
+        {
+            "declaringType": "System.Xml.XmlTextReader",
+            "methodName": "ReadAsync",
+            "parameters": []
+        }
+    ]
+}
