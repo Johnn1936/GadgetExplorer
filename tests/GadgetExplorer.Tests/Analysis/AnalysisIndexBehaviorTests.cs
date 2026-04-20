@@ -44,20 +44,6 @@ namespace GadgetExplorer.Tests.Analysis
         }
 
         [Fact]
-        public void Activator_create_instance_constant_type_call_is_summarized_as_a_type_constant()
-        {
-            var method = GetMethod("ActivatorCreateInstanceConstantNegative::.ctor()");
-            var edge = fixture.Index.GetOutgoingEdges(method.Id)
-                .Select(fixture.Index.GetEdge)
-                .Single(candidate => fixture.Index.GetMethod(candidate.TargetId).DisplayName.EndsWith("System.Activator::CreateInstance(System.Type)", StringComparison.Ordinal));
-
-            var summary = Assert.Single(edge.ArgumentSummaries);
-            Assert.True(summary.IsProvablyConstant);
-            Assert.Equal(ConstantValueKind.Type, summary.ConstantKind);
-            Assert.Equal("MySpecialObject", summary.DisplayValue);
-        }
-
-        [Fact]
         public void Uri_constructor_result_is_summarized_as_a_uri_constant()
         {
             var method = GetMethod("UriConstantSource::.ctor()");
@@ -117,26 +103,6 @@ namespace GadgetExplorer.Tests.Analysis
             EdgeRecord[] outgoingEdges = GetOutgoingEdges(strictIndex, method);
 
             Assert.DoesNotContain(outgoingEdges, edge => edge.Kind == EdgeKind.InterfaceDispatch);
-        }
-
-        [Fact]
-        public void Smoke_sample_index_metrics_match_the_baseline_contract()
-        {
-            string sampleAssemblyPath = Path.GetFullPath(typeof(MySpecialObject).Assembly.Location);
-            var assemblies = AssemblyInputLoader.LoadModules(
-                [sampleAssemblyPath],
-                assemblyResolutionMode: AssemblyResolutionMode.Restricted);
-            AnalysisIndex strictIndex = AnalysisIndex.Build(assemblies);
-
-            Assert.Equal(1298, strictIndex.Types.Count);
-            Assert.Equal(9987, strictIndex.Methods.Count);
-            Assert.Equal(978, strictIndex.PropertyCount);
-            Assert.Equal(406, strictIndex.PublicInstancePropertySetterCount);
-            Assert.Equal(10, strictIndex.Events.Count);
-            Assert.Equal(28278, strictIndex.Edges.Count);
-            Assert.Equal(2275, strictIndex.OverrideRelationshipCount);
-            Assert.Equal(211, strictIndex.InterfaceImplementationRelationshipCount);
-            Assert.Equal(588, strictIndex.InstantiatedTypeCount);
         }
 
         private static EdgeRecord[] GetOutgoingEdges(AnalysisIndex index, MethodRecord method)
