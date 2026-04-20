@@ -19,7 +19,7 @@
 
 GadgetExplorer is a .NET command-line tool for finding potential deserialization gadget chains in managed applications. It scans one or more assemblies, builds a reachability graph with dispatch and callback heuristics, and reports when a deserialization entrypoint can reach a sink you care about.
 
-The tool is aimed at people doing .NET security review, deserialization research, gadget hunting, secure code review, and targeted triage of suspicious managed applications. It is especially useful when you already know which serializer behavior and sink families you care about and want a faster way to answer: "Could this deserialization entrypoint lead to a usable gadget chain into this sink?"
+The tool is aimed at people doing .NET deserialization research, gadget hunting, exploit development and vulnerability research of managed applications. It is especially useful when you already know which serializer behavior and sink families you care about and want a faster way to answer: "Could this deserialization entrypoint lead to a usable gadget chain into this sink?"
 
 Out of the box, the shipped sink set contains hundreds of sinks, covering common categories such as:
 
