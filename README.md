@@ -198,120 +198,72 @@ Ignore-sink files do not use `ignoreSinkIfConstant`. They simply describe sink p
 Scan a single assembly with the built-in Json.NET profile:
 
 ```text
-.\GadgetExplorer.exe .\App.dll --profile JsonDotNet --output .\Scan-JsonDotNet.txt
-
-or
-
 .\GadgetExplorer.exe .\App.dll -p JsonDotNet -o .\Scan-JsonDotNet.txt
 ```
 
 Use the shipped sink directories by default:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile JsonDotNet --output .\Scan-DefaultSinks.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p JsonDotNet -o .\Scan-DefaultSinks.txt
 ```
 
 Scan a directory tree with the built-in BinaryFormatter profile using  a max path length of 12:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile BinaryFormatter --max-path-length 12 --output .\Scan-BinaryFormatter.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p BinaryFormatter -mpl 12 -o .\Scan-BinaryFormatter.txt
 ```
 
 Scan a directory tree with the built-in XmlSerializer profile:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile XmlSerializer --output .\Scan-XmlSerializer.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p XmlSerializer -o .\Scan-XmlSerializer.txt
 ```
 
 Scan a directory tree with the built-in MessagePack Typeless profile and a max path length of 8:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile MessagePackTypeless --max-path-length 8 --output .\Scan-MessagePackTypeless.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p MessagePackTypeless -mpl 8 -o .\Scan-MessagePackTypeless.txt
 ```
 
 Use the built-in Json.NET profile with a custom sink file, a custom ignore-sink file, and `type-name` sorting:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile JsonDotNet --sinks .\CustomIncludeSinks.json --ignore-sinks .\CustomIgnoreSinks.json --sort type-name --output .\Scan-CustomSinks-TypeName.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p JsonDotNet -is .\CustomIncludeSinks.json -ig .\CustomIgnoreSinks.json -s type-name -o .\Scan-CustomSinks-TypeName.txt
 ```
 
 Use the built-in Json.NET profile with a custom sink directory:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile JsonDotNet --sinks .\CustomSinks --output .\Scan-CustomSinkDirectory.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p JsonDotNet -is .\CustomSinks -o .\Scan-CustomSinkDirectory.txt
 ```
 
 Write the structured JSON report to disk for downstream processing:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile JsonDotNet --output-format json --output .\Scan-JsonDotNet.json
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p JsonDotNet -of json -o .\Scan-JsonDotNet.json
 ```
 
 Infer the target runtime from runtimeconfig files, but stay inside the supplied inputs if inference fails:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile JsonDotNet --assembly-resolution-mode inference-no-fallback --output .\Scan-InferenceNoFallback.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p JsonDotNet -arm inference-no-fallback -o .\Scan-InferenceNoFallback.txt
 ```
 
 Infer the target runtime first, then allow host-runtime fallback if inference fails:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile JsonDotNet --assembly-resolution-mode inference-with-fallback --output .\Scan-InferenceWithFallback.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -p JsonDotNet -arm inference-with-fallback -o .\Scan-InferenceWithFallback.txt
 ```
 
 Use a built-in profile with explicit interface handling, sorting, and max path length:
 
 ```text
-.\GadgetExplorer.exe .\App.dll --profile JsonDotNet --assembly-resolution-mode restricted --interface-expansion broad --sort shortest-path --max-path-length 8 --output .\Scan-Restricted-Broad.txt
-
-or
-
 .\GadgetExplorer.exe .\App.dll -p JsonDotNet -arm restricted -ie broad -s shortest-path -mpl 8 -o .\Scan-Restricted-Broad.txt
 ```
 
 Use a custom serializer profile file, a custom sink file, custom ignore sinks, sort by per-sink shortest path, and cap paths at 12:
 
 ```text
-.\GadgetExplorer.exe "C:\Target\App" --profile-file .\Profiles\Custom.profile.json --sinks .\CustomIncludeSinks.json --ignore-sinks .\CustomIgnoreSinks.json --sort per-sink-shortest-path --max-path-length 12 --output .\Scan-Custom.txt
-
-or
-
 .\GadgetExplorer.exe "C:\Target\App" -pf .\Profiles\Custom.profile.json -is .\CustomIncludeSinks.json -ig .\CustomIgnoreSinks.json -s per-sink-shortest-path -mpl 12 -o .\Scan-Custom.txt
 ```
 
