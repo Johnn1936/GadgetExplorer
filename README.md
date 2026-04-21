@@ -269,8 +269,6 @@ Use a custom serializer profile file, a custom sink file, custom ignore sinks, s
 
 ## Sample Findings
 
-The examples below are representative real chains. Their formatting has been reviewed against the current text report layout so labels such as `Assembly`, `Declared On`, `Note`, edge kinds, and `Origin=input-root` still match the current renderer.
-
 ### Arbitrary Method Invocations
 
 ```text
